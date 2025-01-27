@@ -1,0 +1,47 @@
+@model TesteDevDbm.Models.Protocolo
+
+@{
+    ViewData["Title"] = "Deletar Protocolo";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center text-danger">Deseja realmente deletar esse protocolo?</h2>
+            <p class="text-center text-muted">Essa operação é irreversível.</p>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-6 fw-bold">Título:</dt>
+                        <dd class="col-sm-6">@Html.DisplayFor(x => x.Titulo)</dd>
+
+                        <dt class="col-sm-6">Descrição:</dt>
+                        <dd class="col-sm-6">@Html.DisplayFor(x => x.Descricao)</dd>
+
+                        <dt class="col-sm-6">Cliente:</dt>
+                        <dd class="col-sm-6">@Html.DisplayFor(x => x.Cliente.Nome)</dd>
+
+                        <dt class="col-sm-6">Status Protocolo:</dt>
+                        <dd class="col-sm-6">@Html.DisplayFor(x => x.ProtocoloStatus.NomeStatus)</dd>
+
+                        <dt class="col-sm-6">Data de Abertura:</dt>
+                        <dd class="col-sm-6">@Html.DisplayFor(x => x.DataAbertura)</dd>
+
+                        <dt class="col-sm-6">Data de Fechamento:</dt>
+                        <dd class="col-sm-6">@Html.DisplayFor(x => x.DataFechamento)</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <form asp-action="Deletar" class="mt-4">
+                <input type="hidden" asp-for="IdProtocolo" />
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

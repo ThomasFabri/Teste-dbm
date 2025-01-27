@@ -1,0 +1,41 @@
+@model TesteDevDbm.Models.Cliente
+
+@{
+    ViewData["Title"] = "Deletar Cliente";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center text-danger">Deseja realmente deletar este cliente?</h2>
+            <p class="text-center text-muted">Essa operação é irreversível.</p>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Nome:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Nome)</dd>
+
+                        <dt class="col-sm-4 fw-bold">E-mail:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Email)</dd>
+
+                        <dt class="col-sm-4 fw-bold">Telefone:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Telefone)</dd>
+
+                        <dt class="col-sm-4 fw-bold">Endereço:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Endereco)</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <form asp-action="Deletar" class="mt-4">
+                <input type="hidden" asp-for="IdCliente" />
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

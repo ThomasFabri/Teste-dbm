@@ -1,0 +1,36 @@
+@model TesteDevDbm.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes do Cliente";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Detalhes do Cliente</h2>
+            <hr />
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Nome:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Nome)</dd>
+
+                        <dt class="col-sm-4 fw-bold">E-mail:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Email)</dd>
+
+                        <dt class="col-sm-4 fw-bold">Telefone:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Telefone)</dd>
+
+                        <dt class="col-sm-4 fw-bold">Endereço:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.Endereco)</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <a asp-action="Editar" asp-route-id="@Model.IdCliente" class="btn btn-primary">Editar</a>
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>

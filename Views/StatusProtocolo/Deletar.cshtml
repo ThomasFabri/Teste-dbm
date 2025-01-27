@@ -1,0 +1,31 @@
+@model TesteDevDbm.Models.StatusProtocolo
+
+@{
+    ViewData["Title"] = "Deletar status de protocolo";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center text-danger">Deseja realmente deletar esse status?</h2>
+            <p class="text-center text-muted">Essa operação é irreversível.</p>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Nome:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(x => x.NomeStatus)</dd>
+                    </dl>
+                </div>
+            </div>
+            <form asp-action="Deletar" class="mt-4">
+                <input type="hidden" asp-for="IdStatus" />
+                <div class="d-flex justify-content-between">
+                    <button type="submit" value="Deletar" class="btn btn-danger">Confirmar Exclusão</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

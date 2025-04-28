@@ -1,6 +1,6 @@
 Sistema de Cadastro de Protocolo 
 
-Este projeto é um sistema básico de cadastro e gerenciamento de protocolos, conforme solicitado no teste de desenvolvedor DBM. O sistema foi desenvolvido utilizando .NET Core 8, SQL Server, e implementando o padrão MVC (Model-View-Controller). Para rodar este projeto localmente, siga os passos abaixo:
+Este projeto é um sistema básico de cadastro e gerenciamento de protocolos. O sistema foi desenvolvido utilizando .NET Core 8, SQL Server, e implementando o padrão MVC (Model-View-Controller). Para rodar este projeto localmente, siga os passos abaixo:
 
 Clone o repositório Primeiro, clone este repositório em seu computador:
 git clone https://github.com/ThomasFabri/Teste-dbm.git
